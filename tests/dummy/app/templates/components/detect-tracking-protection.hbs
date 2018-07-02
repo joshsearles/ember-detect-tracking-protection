@@ -1,0 +1,8 @@
+<div>
+  This browser {{{if isDoNotTrack '<strong>has</strong>' '<strong>does not</strong> have'}}} the Do Not Track setting set.
+</div>
+{{#if showMessage}}
+<div>
+  This browser {{{if hasTrackingProtection '<strong>has</strong>' '<strong>does not</strong> have'}}} Tracking Protection enabled.
+</div>
+{{/if}}
