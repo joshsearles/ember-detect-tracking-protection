@@ -31,7 +31,7 @@ export default Component.extend(Detect, {
 * detectResolved() passes a boolean parameter if the browser has tracking protection
 
 
-###Using the Service
+### Using the Service
 ```ecmascript 6
 detect: service('detect-tp')
 ```
@@ -44,7 +44,7 @@ There is a few public variables as well
 * isBlocked - Returns a Boolean if Tracking Protection is enabled on a browser. default is false while it resolves
 * hasChecked - Returns a Boolean if the service has resolved or not the static, standard asset.
 
-###Other Utilities
+### Other Utilities
 - isDoNotTrack - Direct import of the above isDoNotTrack (const) in case you do not want to load in the service
 ```ecmascript 6
 import { isDoNotTrack } from 'ember-detect-tracking-protection/utilities/detect';
