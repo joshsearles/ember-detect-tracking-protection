@@ -1,6 +1,6 @@
 {
   "name": "ember-detect-tracking-protection",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Checks to see if the browser has tracking protection.",
   "keywords": [
     "ember-addon",
