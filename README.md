@@ -1,8 +1,10 @@
 ember-detect-tracking-protection
 ==============================================================================
 
-Addon made to help detect Firefox's tracking protection feature which is based off of disconnectme. 
-This addon may also be used to detect similar featured plugins that a user may install to their browser like uBlock Origin.
+Addon made to help detect Firefox's tracking protection feature which is based 
+off of Disconnect. 
+This addon may also be used to detect similar featured plugins that a user may 
+install to their browser like uBlock Origin.
 
  
 Installation
@@ -12,11 +14,39 @@ Installation
 ember install ember-detect-tracking-protection
 ```
 
+What is Tracking Protection?
+------------------------------------------------------------------------------
+Tracking can be described as the collection of a person's browsing data across 
+a multitude of websites.
+Tracking Protection prevents services from utilizing tracking usually by 
+intercepting the request and blocking it.
+Firefox and browser extensions such as uBlockOrigin utilize Tracking Protection 
+but in different ways.
+
+Firefox uses a list provided from Disconnect to decide what domains/services 
+they intercept.
+Currently by default, Firefox does not turn on Tracking Protection for normal
+browsing but, in it's Private Browsing mode it is active.
+This is an option in the browser settings that users can have Tracking 
+Protection at all times.
+
+
+Ads are gone, why should I care?
+------------------------------------------------------------------------------
+Tracking Protection goes beyond the blocking of ads. For instance, those who 
+use a tag manager such as Google Tag Manager, which can be used for the addition
+of JavaScript functionality to your application or website, GTM is blocked as 
+well. 
+
+This is why this addon exists. To provide a second course of action when a 
+service that you expect to be present, is not for some users due to Tracking
+Protection, extensions, or similar interceptors.
+
 
 Usage
 ------------------------------------------------------------------------------
 
-###Basic Component Setup using Mixin
+### Basic Component Setup using Mixin
 ```ecmascript 6
 import Component from '@ember/component';
 import Detect from 'ember-detect-tracking-protection/mixins/detect';
@@ -51,7 +81,7 @@ import { isDoNotTrack } from 'ember-detect-tracking-protection/utilities/detect'
 ```
 
 ### Other Resources
-* [Link to Urls Firefox Tracking Protection Blocked URLs](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json)
+* [Disconnect list of blocked domains for Firefox](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json)
 
 
 
